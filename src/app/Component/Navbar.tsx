@@ -1,6 +1,5 @@
 "use client";
 
-import styled from "@emotion/styled";
 import { Button } from "@mui/material";
 
 function Navbar() {

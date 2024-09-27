@@ -2,7 +2,11 @@
 import { Autocomplete, TextField } from "@mui/material";
 import { useState } from "react";
 
-function CountryList({ countries }) {
+interface Props {
+  countries: any[];
+}
+
+function CountryList({ countries }: Props) {
   const [selectedCountry, setSelectedCountry] = useState([]);
 
   function handleChange(event: any, value: any) {

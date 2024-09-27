@@ -1,6 +1,7 @@
 "use client";
 
 import { Paper } from "@mui/material";
+import Image from "next/image";
 import { useState } from "react";
 import { catchError, of, switchMap } from "rxjs";
 import { fromFetch } from "rxjs/fetch";
@@ -34,19 +35,22 @@ function RxJSPage() {
           This page will test on RxJS to fetch a list of countries name and flag
         </div>
         <div className="grid grid-cols-5 gap-5">
-          {countries.map((country) => {
-            const countryName = country.name.common;
-            const countryFlag = country.flags.png;
+          {countries.map((country, index) => {
+            const countryName = country["name"]["common"];
+            const countryFlag = country["flags"]["png"];
 
             return (
-              <div className="flex-wrap">
+              <div className="flex-wrap" key={index}>
                 <Paper>
                   <div>{countryName}</div>
                   <div>
-                    <img
-                      className="object-scale-down h-20"
+                    <Image
+                      className="object-scale-down h-20 w-full"
+                      width={0}
+                      height={0}
                       src={countryFlag}
-                    ></img>
+                      alt={countryName}
+                    ></Image>
                   </div>
                 </Paper>
               </div>

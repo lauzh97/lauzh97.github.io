@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { catchError, of, switchMap, take, tap } from "rxjs";
-import { fromFetch } from "rxjs/fetch";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 function Home() {
@@ -16,6 +14,19 @@ function Home() {
       const data = await res.json();
       processData(data);
     }
+
+    function processData(data: any) {
+      const tempCountries = data.map((country: any, index: any) => ({
+        id: index + 1,
+        name: country.name.common,
+        capital: country.capital,
+        region: country.region,
+        population: country.population,
+        independent: country.independent ? "Yes" : "No",
+      }));
+
+      setCountries(countries.concat(tempCountries));
+    }
     fetchCountries();
   }, []);
 
@@ -27,19 +38,6 @@ function Home() {
     { field: "population", headerName: "Population", type: "number" },
     { field: "independent", headerName: "Independent" },
   ];
-
-  function processData(data) {
-    const tempCountries = data.map((country, index) => ({
-      id: index + 1,
-      name: country.name.common,
-      capital: country.capital,
-      region: country.region,
-      population: country.population,
-      independent: country.independent ? "Yes" : "No",
-    }));
-
-    setCountries(countries.concat(tempCountries));
-  }
 
   return (
     <>
