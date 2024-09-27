@@ -4,8 +4,10 @@
 2. Install Next.js with `npx create-next-app@latest`
    - install with default settings
 3. Install dependencies with `npm i`
-4. Install Material UI with `npm install @mui/material @emotion/react @emotion/styled @fontsource/roboto @mui/icons-material`
-5. Install Material UI and Next.js integration with `npm install @mui/material-nextjs @emotion/cache`
+4. Install Material UI with `npm install @mui/material @emotion/react @emotion/styled @fontsource/roboto @mui/icons-material @mui/x-date-pickers @mui/x-data-grid`
+5. Install Moment.js (datetime formatter) `npm install moment`
+6. Install Material UI and Next.js integration with `npm install @mui/material-nextjs @emotion/cache`
+7. Install RxJS with `npm install rxjs`
 
 ## For VS Code
 

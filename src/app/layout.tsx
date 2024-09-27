@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import Navbar from "./Component/Navbar";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,7 +34,7 @@ export default function RootLayout({
       >
         <AppRouterCacheProvider>
           <Navbar />
-          {children}
+          <div className="container max-w-full p-2">{children}</div>
         </AppRouterCacheProvider>
       </body>
     </html>
