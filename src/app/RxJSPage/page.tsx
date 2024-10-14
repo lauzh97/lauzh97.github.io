@@ -1,6 +1,6 @@
 "use client";
 
-import FromFetchRxJS from "@/components/util/fromFetchRxJS";
+import FromFetchRxJS from "@/utils/fromFetchRxJS";
 import { Paper } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -25,8 +25,8 @@ function RxJSPage() {
 
   return (
     <>
-      <div className="grid grid-cols-1">
-        <div className="mb-5">
+      <div className="grid grid-cols-1 gap-5">
+        <div>
           This page will test on RxJS to fetch a list of countries name and flag
         </div>
         <div className="grid grid-cols-5 gap-5">
