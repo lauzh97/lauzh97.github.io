@@ -41,8 +41,8 @@ function Home() {
 
   return (
     <>
-      <div className="grid grid-cols-1">
-        <div className="mb-5">
+      <div className="grid grid-cols-1 gap-5">
+        <div>
           <>This page will test on Material UI table</>
         </div>
         <div>

@@ -22,8 +22,8 @@ function DatePickerPage() {
 
   return (
     <>
-      <div className="grid grid-cols-2 items-center">
-        <div className="col-span-2 mb-5">
+      <div className="grid grid-cols-2 items-center gap-5">
+        <div className="col-span-2">
           This page will test on Material UI datepicker with moment.js
         </div>
         <div>
@@ -32,9 +32,9 @@ function DatePickerPage() {
           </LocalizationProvider>
         </div>
         {!selectedDate ? (
-          <div className="ml-5">Date not chosen</div>
+          <div>Date not chosen</div>
         ) : (
-          <div className="ml-5">Chosen Date:{formatToDate(selectedDate)}</div>
+          <div>Chosen Date:{formatToDate(selectedDate)}</div>
         )}
       </div>
     </>

@@ -8,6 +8,7 @@ function Navbar() {
     { name: "AutoCompletePage", link: "AutoCompletePage" },
     { name: "DatePickerPage", link: "DatePickerPage" },
     { name: "RxJSPage", link: "RxJSPage" },
+    { name: "ProgressBarPage", link: "ProgressBarPage" },
   ];
 
   return (
