@@ -68,7 +68,7 @@ function ProgressBarPage() {
       .pipe(takeUntil(stop$))
       .subscribe((v) => {
         bars[i].value = v;
-        setBars([...bars]);
+        // setBars([...bars]);
       });
     bars[i].isStarted = true;
   }
